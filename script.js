@@ -17,12 +17,16 @@ canvas.addEventListener("click", (e) => {
 });
 
 function addShape(type) {
+    var lb = ""
+    do{
+        lb = prompt("Digite o nome (ou numero) desse item:")
+    }while(!lb || lb=="")
     const shape = {
         type,
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: 50,
-        label: prompt("Digite o nome (ou numero) desse item:"),
+        label: lb,
         path: new Path2D(),
         order:{
             id:0,
