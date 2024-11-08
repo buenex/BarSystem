@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Dinâmico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mapa Dinâmico do Bar/Restaurante</h1>
+    <div id="toolbar">
+        <button onclick="addShape('circle')">Adicionar Círculo</button>
+        <button onclick="addShape('square')">Adicionar Quadrado</button>
+    </div>
+    <canvas id="mapCanvas" width="800" height="600"></canvas>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1 id="table-name">Mesa: </h2>
+            <h2 id="order-id">Comanda: </h2>
+            <h3 id="customer-name">Nome: </h3>
+            <input type="text" id="item" placeholder="Item da Comanda">
+            <button onclick="addToComanda()">Adicionar Item</button>
+            <ol id="comandaList"></ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
